@@ -1,0 +1,13 @@
+.questioncard__taglist {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 10px 0 5px 0px;
+}
+
+.questioncard__taglist__item {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f4cee0;
+}

@@ -1,0 +1,11 @@
+@import "./questioncard_tags.css";
+@import "./show-answers.css";
+@import "./bookmark-button.css";
+
+.questioncard {
+  background-color: #faf0e6;
+  border-radius: 15px;
+  margin: 30px 20px;
+  padding: 20px;
+  position: relative;
+}

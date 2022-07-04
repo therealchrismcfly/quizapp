@@ -6,31 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@300&family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <h1>Bookmarks</h1>
     </header>
     <main>
-      <article class="question-card">
-        <button class="question-card__bookmark-button">C</button>
-        <p class="question-card__question">
+      <article class="questioncard">
+        <button
+          class="questioncard__bookmark-button questioncard__bookmark-button--filled"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48"
+            width="48"
+            style="background-color: #fff9f1"
+          >
+            <path
+              d="m13 37.45 11-4.65 11 4.65V8.75H13ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h22q1.2 0 2.1.9.9.9.9 2.1V42l-14-6ZM35 8.75H13h22Z"
+            />
+          </svg>
+        </button>
+        <p class="questioncard__question" data-js="text">
           Welches Tier ziert das Wappen der Lennisters?
         </p>
-        <button class="question-card__show-answers-button">Show Answer</button>
-        <ul class="taglist">
-          <li class="taglist-item">GameOfThrones</li>
-          <li class="taglist-item">Tag2</li>
-          <li class="taglist-item">Tag3</li>
+        <div class="questioncard__show-answers">
+          <button class="questioncard__show-answers__button" data-js="button">
+            Show Answer
+          </button>
+        </div>
+        <ul class="questioncard__taglist">
+          <li><button class="questioncard__taglist__item">Series</button></li>
+          <li>
+            <button class="questioncard__taglist__item">Game Of Thrones</button>
+          </li>
+          <li><button class="questioncard__taglist__item">Fantasy</button></li>
         </ul>
       </article>
     </main>
-    <nav class="navbar">
-      <ul>
-        <li class="navbar-item"><a href="/index.html">homepage</a></li>
-        <li class="navbar-item"><a href="/bookmarks.html">bookmarks</a></li>
-        <li class="navbar-item"><a href="/create.html">create</a></li>
-        <li class="navbar-item"><a href="/profiles.html">profiles</a></li>
+    <nav>
+      <ul class="navbar">
+        <li class="navbar__item"><a href="/index.html">homepage</a></li>
+        <li class="navbar__item"><a href="/bookmarks.html">bookmarks</a></li>
+        <li class="navbar__item"><a href="/create.html">create</a></li>
+        <li class="navbar__item"><a href="/profile.html">profiles</a></li>
       </ul>
     </nav>
   </body>
