@@ -6,5 +6,12 @@
 }
 
 body {
-  background-color: #eed5ff;
+  background-color: var(--mint);
+}
+
+:root {
+  --lavendel: #d4c4f4;
+  --pink: #f468bc;
+  --yellow: #ecf5ad;
+  --mint: #aaebda;
 }

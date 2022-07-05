@@ -1,6 +1,8 @@
 let button = document.querySelector('[data-js="button"]');
-let text = document.querySelector('[data-js="text"]');
-function changeColor() {
-  text.classList.toggle("text--colored");
+let answer = document.querySelector('[data-js="answer"]');
+
+function onButtonClick() {
+  answer.classList.toggle("card__show-answer__answer--hidden");
 }
-button.addEventListener("click", changeColor);
+
+button.addEventListener("click", onButtonClick);

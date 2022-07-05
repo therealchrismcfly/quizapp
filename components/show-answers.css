@@ -1,14 +1,22 @@
-.card__show-answers {
+.card__show-answer {
   display: flex;
   justify-content: center;
 }
 
-.card__show-answers__button {
+.card__show-answer__button {
   padding: 12px;
   margin: 20px 5px;
   border-radius: 25px;
   border: none;
   display: flex;
   justify-content: center;
-  background-color: #fef9c1;
+  background-color: var(--pink);
+}
+
+.card__show-answer__answer {
+  display: flex;
+}
+
+.card__show-answer__answer--hidden {
+  display: none;
 }
