@@ -9,11 +9,13 @@ function onButtonClick() {
 
 button.addEventListener("click", onButtonClick);
 
+//Bookmark Button
+
 let bookmark = document.querySelector('[data-js="bookmark"]');
 let fill = document.querySelector('[data-js="filled"]');
 
-function onButtonClick() {
+function clickBookmark() {
   fill.classList.toggle("bookmark-button__icon");
 }
 
-bookmark.addEventListener("click", onButtonClick);
+bookmark.addEventListener("click", clickBookmark);

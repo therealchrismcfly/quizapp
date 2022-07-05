@@ -15,6 +15,8 @@
 
 .card__show-answer__answer {
   display: flex;
+  justify-content: center;
+  padding-top: 15px;
 }
 
 .card__show-answer__answer--hidden {
