@@ -1,15 +1,14 @@
-.questioncard__show-answers {
+.card__show-answers {
   display: flex;
   justify-content: center;
 }
 
-.questioncard__show-answers__button {
+.card__show-answers__button {
   padding: 12px;
   margin: 20px 5px;
   border-radius: 25px;
   border: none;
   display: flex;
   justify-content: center;
-  background-color: #02422a;
-  color: white;
+  background-color: #fef9c1;
 }

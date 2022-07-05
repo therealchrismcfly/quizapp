@@ -1,4 +1,6 @@
-.questioncard__bookmark-button {
+.card__bookmark-button {
+  width: 45px;
+  height: 45px;
   position: absolute;
   top: -15px;
   right: -5px;
