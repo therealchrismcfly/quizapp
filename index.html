@@ -19,35 +19,24 @@
       <h1>Quiz-App</h1>
     </header>
     <main>
-      <article class="questioncard">
-        <button
-          class="questioncard__bookmark-button questioncard__bookmark-button--filled"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="48"
-            width="48"
-            style="background-color: #fff9f1"
-          >
-            <path
-              d="m13 37.45 11-4.65 11 4.65V8.75H13ZM10 42V8.75q0-1.2.9-2.1.9-.9 2.1-.9h22q1.2 0 2.1.9.9.9.9 2.1V42l-14-6ZM35 8.75H13h22Z"
-            />
-          </svg>
+      <article class="card">
+        <button class="card__bookmark-button card__bookmark-button--filled">
+          <svg src="/images/bookmark.svg"></svg>
         </button>
-        <p class="questioncard__question" data-js="text">
+        <p class="card__question" data-js="text">
           Welches Tier ziert das Wappen der Lennisters?
         </p>
-        <div class="questioncard__show-answers">
-          <button class="questioncard__show-answers__button" data-js="button">
+        <div class="card__show-answers">
+          <button class="card__show-answers__button" data-js="button">
             Show Answer
           </button>
         </div>
-        <ul class="questioncard__taglist">
-          <li><button class="questioncard__taglist__item">Series</button></li>
+        <ul class="card__taglist">
+          <li><button class="card__taglist__item">Series</button></li>
           <li>
-            <button class="questioncard__taglist__item">Game Of Thrones</button>
+            <button class="card__taglist__item">Game Of Thrones</button>
           </li>
-          <li><button class="questioncard__taglist__item">Fantasy</button></li>
+          <li><button class="card__taglist__item">Fantasy</button></li>
         </ul>
       </article>
     </main>
