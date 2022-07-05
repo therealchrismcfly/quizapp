@@ -1,3 +1,5 @@
+//Show answer
+
 let button = document.querySelector('[data-js="button"]');
 let answer = document.querySelector('[data-js="answer"]');
 
@@ -6,3 +8,12 @@ function onButtonClick() {
 }
 
 button.addEventListener("click", onButtonClick);
+
+let bookmark = document.querySelector('[data-js="bookmark"]');
+let fill = document.querySelector('[data-js="filled"]');
+
+function onButtonClick() {
+  fill.classList.toggle("bookmark-button__icon");
+}
+
+bookmark.addEventListener("click", onButtonClick);

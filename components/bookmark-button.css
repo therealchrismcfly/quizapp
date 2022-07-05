@@ -1,8 +1,17 @@
-.card__bookmark-button {
+.bookmark-button {
   width: 45px;
   height: 45px;
   position: absolute;
   top: -15px;
   right: -5px;
   border: none;
+  background: transparent;
+}
+
+.bookmark-button__icon--filled {
+  fill: var(--pink);
+}
+
+.bookmark-button__icon {
+  fill: none;
 }

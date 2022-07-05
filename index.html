@@ -20,16 +20,16 @@
     </header>
     <main>
       <article class="card">
-        <button>
+        <button class="bookmark-button" data-js="bookmark">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="card__bookmark-button card__bookmark-button--filled"
+            class="bookmark-button__icon bookmark-button__icon--filled"
+            data-js="filled"
             viewBox="0 0 512 512"
           >
             <title>Bookmark</title>
             <path
               d="M352 48H160a48 48 0 00-48 48v368l144-128 144 128V96a48 48 0 00-48-48z"
-              fill="none"
               stroke="var(--pink)"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -37,6 +37,7 @@
             />
           </svg>
         </button>
+
         <p class="card__question">
           Welches Tier ziert das Wappen der Lennisters?
         </p>
