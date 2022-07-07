@@ -2,17 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat";
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
-  background-color: var(--mint);
+  background-color: var(--black);
 }
 
 :root {
-  --lavendel: #d4c4f4;
-  --pink: #f468bc;
-  --rose: #f5c1e9;
-  --yellow: #ecf5ad;
-  --mint: #aaebda;
+  --apricot: #fe9f8e;
+  --pink: #e36da3;
+  --black: #212b36;
 }

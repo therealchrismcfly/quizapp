@@ -1,9 +1,11 @@
 header {
   display: flex;
   justify-content: center;
-  background-color: var(--lavendel);
+  background-color: var(--apricot);
 }
 
 h1 {
   margin: 20px;
+  color: white;
+  font-weight: bolder;
 }
