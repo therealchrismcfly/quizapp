@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="index.js" defer></script>
+    <script src="index.js" defer type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,13 +27,8 @@
             data-js="filled"
             viewBox="0 0 512 512"
           >
-            <title>Bookmark</title>
             <path
               d="M352 48H160a48 48 0 00-48 48v368l144-128 144 128V96a48 48 0 00-48-48z"
-              stroke="var(--pink)"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="32"
             />
           </svg>
         </button>
@@ -41,6 +36,11 @@
         <p class="card__question">
           Welches Tier ziert das Wappen der Lennisters?
         </p>
+        <div class="card__show-answer">
+          <button class="card__show-answer__button" data-js="button">
+            Show Answer
+          </button>
+        </div>
         <p
           class="card__show-answer__answer--hidden card__show-answer__answer"
           data-js="answer"
@@ -48,11 +48,6 @@
           Der Löwe
         </p>
 
-        <div class="card__show-answer">
-          <button class="card__show-answer__button" data-js="button">
-            Show Answer
-          </button>
-        </div>
         <ul class="card__taglist">
           <li><button class="card__taglist__item">Series</button></li>
           <li>

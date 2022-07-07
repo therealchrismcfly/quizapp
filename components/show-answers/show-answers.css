@@ -5,9 +5,9 @@
 
 .card__show-answer__button {
   padding: 12px;
-  margin: 20px 5px;
-  border-radius: 25px;
+  margin: 25px 0 20px 0;
   border: none;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   background-color: var(--pink);
@@ -16,7 +16,8 @@
 .card__show-answer__answer {
   display: flex;
   justify-content: center;
-  padding-top: 15px;
+  padding-bottom: 5px;
+  font-size: 14px;
 }
 
 .card__show-answer__answer--hidden {

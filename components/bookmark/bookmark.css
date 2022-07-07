@@ -8,10 +8,14 @@
   background: transparent;
 }
 
-.bookmark-button__icon--filled {
-  fill: var(--pink);
-}
-
 .bookmark-button__icon {
   fill: none;
+  stroke: var(--pink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 32;
+}
+
+.bookmark-button__icon--filled {
+  fill: var(--pink);
 }
