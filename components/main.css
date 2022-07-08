@@ -1,1 +1,5 @@
 @import "./questioncard.css";
+
+main {
+  margin-bottom: 100px;
+}

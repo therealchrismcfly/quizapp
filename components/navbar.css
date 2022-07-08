@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 30px;
   background-color: var(--apricot);
   width: 100%;
   height: 80px;
@@ -16,8 +17,8 @@
 .navbar__button {
   border: none;
   background: transparent;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
 }
 
 .navbar__button__icon {
