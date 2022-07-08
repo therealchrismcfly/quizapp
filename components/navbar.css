@@ -12,3 +12,18 @@
 .navbar__item {
   list-style: none;
 }
+
+.navbar__button {
+  border: none;
+  background: transparent;
+  width: 45px;
+  height: 45px;
+}
+
+.navbar__button__icon {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 32;
+}
