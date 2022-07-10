@@ -3,3 +3,20 @@
 main {
   margin-bottom: 100px;
 }
+
+/* Hide the right content*/
+.page_home--inactive  {
+  display: none;
+}
+
+.page_bookmarks--inactive {
+  display: none;
+}
+
+.page_create--inactive {
+  display: none;
+}
+
+.page_profile--inactive {
+  display: none;
+}

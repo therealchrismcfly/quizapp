@@ -18,54 +18,80 @@
     <header>
       <h1>Quiz-App</h1>
     </header>
+    <div class="page_home page_home--inactive">
     <main data-js="content">
-      <article class="card" data-js="card">
-        <button
-          class="bookmark-button bookmark-button--filled"
-          data-js="bookmark"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M352 48H160a48 48 0 00-48 48v368l144-128 144 128V96a48 48 0 00-48-48z"
-            />
-          </svg>
-        </button>
-        <p class="card__question">
-          Welches Tier ziert das Wappen der Lennisters?
-        </p>
-        <div class="card__show-answer">
-          <button class="card__show-answer__button" data-js="button">
-            Show Answer
-          </button>
-        </div>
-        <p
-          class="card__show-answer__answer--hidden card__show-answer__answer"
-          data-js="answer"
-        >
-          Der Löwe
-        </p>
-        <ul class="card__taglist">
-          <li class="card__taglist__itemlist">
-            <button class="card__taglist__item">Series</button>
-          </li>
-          <li class="card__taglist__itemlist">
-            <button class="card__taglist__item">Game Of Thrones</button>
-          </li>
-          <li class="card__taglist__itemlist">
-            <button class="card__taglist__item">Fantasy</button>
-          </li>
-        </ul>
-      </article>
+    </div>
+      <!-- Bookmark -->
+      <div
+        class="page_bookmarks page_bookmarks--inactive"
+        data-js="page_bookmarks"
+      ></div>
+
+      <!-- Create -->
+      <div class="page_create page_create--inactive" data-js="page_create">
+        <form>
+          <label for="add-question">Add question</label>
+          <input
+            type="textarea"
+            name="addQuestion"
+            id="add-question"
+            placeholder="Add a great question"
+            required
+          />
+
+          <label for="add-answer">Add answer</label>
+          <input
+            type="textarea"
+            name="addAnswer"
+            id="add-answer"
+            placeholder="Add the right answer"
+            required
+          />
+
+          <label for="add-tags">Add tags</label>
+          <input
+            type="textarea"
+            name="addTags"
+            id="add-tags"
+            placeholder="Add tags, divided by comma"
+            required
+          />
+          <button>Submit</button>
+        </form>
+      </div>
+
+      <!-- Profile -->
+      <div class="page_profile page_profile--inactive" data-js="page_profile">
+        <section>
+          <img src="/corgi.png" alt="laughing corgi" />
+          <p>Chris McFly</p>
+        </section>
+        <section>
+          <p>Howdy, this is my first serious coding project.</p>
+        </section>
+        <section>
+          <h2>My Skills</h2>
+          <ul>
+            <li>History</li>
+            <li>Series</li>
+            <li>Dogs</li>
+            <li>Fitness</li>
+            <li>Nutrition</li>
+            <li>Coding(soon)</li>
+            <li>Marketing</li>
+          </ul>
+        </section>
+        <button>Logout</button>
+      </div>
     </main>
     <nav>
       <ul class="navbar">
         <li class="navbar__item">
-          <button class="navbar__button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="navbar__button__icon"
-              viewBox="0 0 512 512"
-            >
+          <button
+            class="navbar__button navbar__button__home--active navbar__button__home--inactive"
+            data-js="nav-home"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path
                 d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
               />
@@ -77,12 +103,11 @@
         </li>
 
         <li class="navbar__item">
-          <button class="navbar__button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="navbar__button__icon"
-              viewBox="0 0 512 512"
-            >
+          <button
+            class="navbar__button navbar__button__bookmark--active navbar__button__bookmark--inactive"
+            data-js="nav-bookmark"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path
                 d="M352 48H160a48 48 0 00-48 48v368l144-128 144 128V96a48 48 0 00-48-48z"
               />
@@ -90,12 +115,11 @@
           </button>
         </li>
         <li class="navbar__item">
-          <button class="navbar__button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="navbar__button__icon"
-              viewBox="0 0 512 512"
-            >
+          <button
+            class="navbar__button navbar__button__create--active navbar__button__create--inactive"
+            data-js="nav-create"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path
                 d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48"
               />
@@ -106,12 +130,11 @@
           </button>
         </li>
         <li class="navbar__item">
-          <button class="navbar__button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="navbar__button__icon"
-              viewBox="0 0 512 512"
-            >
+          <button
+            class="navbar__button navbar__button__profile--active navbar__button__profile--inactive"
+            data-js="nav-profile"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path
                 d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z"
               />
