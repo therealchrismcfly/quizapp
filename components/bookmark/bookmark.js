@@ -3,9 +3,8 @@ export default function Bookmark() {
 
   cardlist.forEach((card) => {
     const bookmarks = card.querySelector('[data-js="bookmark"]');
-    const fill = card.querySelector('[data-js="filled"]');
     bookmarks.addEventListener("click", () => {
-      fill.classList.toggle("bookmark-button__icon--filled");
+      bookmarks.classList.toggle("bookmark-button--filled");
     });
   });
 }

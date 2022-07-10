@@ -42,16 +42,28 @@ export default function Questions() {
     // dann svg und das an Button appenden, button.innerHtml = svg als string reinpacken.
     //ul erstellen, Rest drin verschachteln.
 
+    //Card Question
     const cardQuestion = document.createElement("p");
     cardQuestion.classList.add("card__question");
     cardQuestion.innerText = question.quest;
 
+    //Bookmark Button
     const bookmarkButton = document.createElement("button");
-    bookmarkButton.classList.add("bookmark-button");
+    bookmarkButton.innerHTML = `<svg
+    xmlns="http://www.w3.org/2000/svg"
+  
+    viewBox="0 0 512 512"
+  >
+    <path
+      d="M352 48H160a48 48 0 00-48 48v368l144-128 144 128V96a48 48 0 00-48-48z"
+    />
+  </svg>`;
+    bookmarkButton.classList.add("bookmark-button", "bookmark-button--filled");
+    bookmarkButton.addEventListener("click", () => {
+      bookmarkButton.classList.toggle("bookmark-button--filled");
+    });
 
-    /* const bookmarkButtonIcon = document.createElement("svg");
-    bookmarkButtonIcon.classList.add("bookmark-button__icon");
-    bookmarkButtonIcon.innerHTML = */
+    //Show Answer Button
 
     const showAnswerContainer = document.createElement("div");
     showAnswerContainer.classList.add("card__show-answer");
@@ -59,33 +71,44 @@ export default function Questions() {
     const showAnswerButton = document.createElement("button");
     showAnswerButton.classList.add("card__show-answer__button");
     showAnswerButton.innerText = "Show Answer";
+    let answerShown = false;
     showAnswerButton.addEventListener("click", () => {
       cardAnswer.classList.toggle("card__show-answer__answer--hidden");
+      answerShown = !answerShown;
+      showAnswerButton.innerText = answerShown ? "Show answer" : "Hide answer";
     });
 
+    //Card Answer
     const cardAnswer = document.createElement("p");
     cardAnswer.classList.add("card__show-answer__answer");
     cardAnswer.innerText = question.answer;
     cardAnswer.classList.add = "card__show-answer__answer--hidden";
 
+    //Tags
     const tagContainer = document.createElement("ul");
     tagContainer.classList.add("card__taglist");
 
-    const cardTag = document.createElement("button");
-    cardTag.classList.add("card__taglist__item");
-    cardTag.innerText = question.tags;
+    const cardTag1 = document.createElement("button");
+    cardTag1.classList.add("card__taglist__item");
+    cardTag1.innerText = question.tags[0];
 
-    //Tags erstellen
-    /*const tagContainer = document.createElement("ul");
-    tagContainer.classList.add("card__taglist");
+    const cardTag2 = document.createElement("button");
+    cardTag2.classList.add("card__taglist__item");
+    cardTag2.innerText = question.tags[1];
 
-    question.tags.forEach((tag) => {
+    const cardTag3 = document.createElement("button");
+    cardTag3.classList.add("card__taglist__item");
+    cardTag3.innerText = question.tags[2];
+
+    /* question.tags.forEach((tag) => {
+      const tagContainer = document.createElement("ul");
+      tagContainer.classList.add("card__taglist");
       const cardTag = document.createElement("button");
       cardTag.classList.add("card__taglist__item");
       cardTag.innerText = tag;
     });*/
 
-    //dranhängen
+    //Alles dranhängen
     quizCard.append(
       cardQuestion,
       bookmarkButton,
@@ -94,8 +117,9 @@ export default function Questions() {
       tagContainer
     );
 
+    /*bookmarkButton.append(bookmarkButtonIcon);*/
     showAnswerContainer.append(showAnswerButton);
-    tagContainer.append(cardTag);
+    tagContainer.append(cardTag1, cardTag2, cardTag3);
     main.append(quizCard);
   });
 }
