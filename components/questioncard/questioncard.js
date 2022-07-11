@@ -1,4 +1,5 @@
 import Bookmark from "../bookmark/bookmark.js";
+import ShowAnswer from "../show-answers/show-answers.js";
 export default function Questions() {
   const questions = [
     {
@@ -66,16 +67,9 @@ export default function Questions() {
 
     const showAnswerContainer = document.createElement("div");
     showAnswerContainer.classList.add("card__show-answer");
-
     const showAnswerButton = document.createElement("button");
     showAnswerButton.classList.add("card__show-answer__button");
     showAnswerButton.innerText = "Show Answer";
-    let answerShown = false;
-    showAnswerButton.addEventListener("click", () => {
-      cardAnswer.classList.toggle("card__show-answer__answer--hidden");
-      answerShown = !answerShown;
-      showAnswerButton.innerText = answerShown ? "Hide answer" : "Show answer";
-    });
 
     //Card Answer
     const cardAnswer = document.createElement("p");
@@ -84,6 +78,8 @@ export default function Questions() {
       "card__show-answer__answer--hidden"
     );
     cardAnswer.innerText = question.answer;
+
+    ShowAnswer(showAnswerButton, cardAnswer);
 
     //Tags
     const tagContainer = document.createElement("ul");
