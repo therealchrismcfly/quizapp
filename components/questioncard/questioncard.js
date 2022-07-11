@@ -1,3 +1,4 @@
+import Bookmark from "../bookmark/bookmark.js";
 export default function Questions() {
   const questions = [
     {
@@ -59,9 +60,7 @@ export default function Questions() {
     />
   </svg>`;
     bookmarkButton.classList.add("bookmark-button", "bookmark-button--filled");
-    bookmarkButton.addEventListener("click", () => {
-      bookmarkButton.classList.toggle("bookmark-button--filled");
-    });
+    Bookmark(bookmarkButton);
 
     //Show Answer Button
 
@@ -88,25 +87,12 @@ export default function Questions() {
     const tagContainer = document.createElement("ul");
     tagContainer.classList.add("card__taglist");
 
-    const cardTag1 = document.createElement("button");
-    cardTag1.classList.add("card__taglist__item");
-    cardTag1.innerText = question.tags[0];
-
-    const cardTag2 = document.createElement("button");
-    cardTag2.classList.add("card__taglist__item");
-    cardTag2.innerText = question.tags[1];
-
-    const cardTag3 = document.createElement("button");
-    cardTag3.classList.add("card__taglist__item");
-    cardTag3.innerText = question.tags[2];
-
-    /* question.tags.forEach((tag) => {
-      const tagContainer = document.createElement("ul");
-      tagContainer.classList.add("card__taglist");
+    question.tags.forEach((tag) => {
       const cardTag = document.createElement("button");
       cardTag.classList.add("card__taglist__item");
       cardTag.innerText = tag;
-    });*/
+      tagContainer.append(cardTag);
+    });
 
     //Alles dranhängen
     quizCard.append(
@@ -119,7 +105,6 @@ export default function Questions() {
 
     /*bookmarkButton.append(bookmarkButtonIcon);*/
     showAnswerContainer.append(showAnswerButton);
-    tagContainer.append(cardTag1, cardTag2, cardTag3);
     main.append(quizCard);
   });
 }
