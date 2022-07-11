@@ -59,7 +59,7 @@ export default function Questions() {
       d="M352 48H160a48 48 0 00-48 48v368l144-128 144 128V96a48 48 0 00-48-48z"
     />
   </svg>`;
-    bookmarkButton.classList.add("bookmark-button", "bookmark-button--filled");
+    bookmarkButton.classList.add("bookmark-button");
     Bookmark(bookmarkButton);
 
     //Show Answer Button
@@ -74,14 +74,16 @@ export default function Questions() {
     showAnswerButton.addEventListener("click", () => {
       cardAnswer.classList.toggle("card__show-answer__answer--hidden");
       answerShown = !answerShown;
-      showAnswerButton.innerText = answerShown ? "Show answer" : "Hide answer";
+      showAnswerButton.innerText = answerShown ? "Hide answer" : "Show answer";
     });
 
     //Card Answer
     const cardAnswer = document.createElement("p");
-    cardAnswer.classList.add("card__show-answer__answer");
+    cardAnswer.classList.add(
+      "card__show-answer__answer",
+      "card__show-answer__answer--hidden"
+    );
     cardAnswer.innerText = question.answer;
-    cardAnswer.classList.add = "card__show-answer__answer--hidden";
 
     //Tags
     const tagContainer = document.createElement("ul");
