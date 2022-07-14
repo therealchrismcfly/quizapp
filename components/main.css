@@ -1,11 +1,11 @@
-@import "./questioncard.css";
+@import './questioncard.css';
 
 main {
   margin-bottom: 100px;
 }
 
-/* Hide the right content*/
-.page_home--inactive  {
+/* Hide the right content */
+.page_home--inactive {
   display: none;
 }
 
