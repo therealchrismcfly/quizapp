@@ -1,6 +1,6 @@
-@import "./tags.css";
-@import "./show-answers/show-answers.css";
-@import "./bookmark/bookmark.css";
+@import './tags.css';
+@import './show-answers/show-answers.css';
+@import './bookmark/bookmark.css';
 
 .card {
   background-color: white;

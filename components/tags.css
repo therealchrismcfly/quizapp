@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  padding: 10px 0 5px 0px;
+  padding: 10px 0 5px;
 }
 
 .card__taglist__item {
